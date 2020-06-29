@@ -10,6 +10,8 @@ const app = express();
 const clientPath = `${__dirname}/../client`;
 console.log(`Serving static from ${clientPath}`);
 
+app.get('/', (req, res) => res.send('hello'));
+
 app.use(express.static(clientPath));
 
 const server = http.createServer(app);
