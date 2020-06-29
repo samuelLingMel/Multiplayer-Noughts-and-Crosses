@@ -2,7 +2,7 @@
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-const port = process.env.Port || 3000
+const port = process.env.Port || 3000;
 const XOsGame = require('./x&o-logic.js');
 
 const app = express();
@@ -11,6 +11,8 @@ const clientPath = `${__dirname}/../client`;
 console.log(`Serving static from ${clientPath}`);
 
 app.get('/', (req, res) => res.send('hello'));
+
+app.listen(port, () => console.log(`server listening on port: ${port}`));
 
 app.use(express.static(clientPath));
 
