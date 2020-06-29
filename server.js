@@ -16,8 +16,8 @@ console.log(`Serving static from ${clientPath}`);
 
 app.use(express.static(clientPath));
 
-// const server = http.createServer(app);
-const server = express();
+const server = http.createServer(app);
+// const server = express();
 
 const io = socketio(server);
 
