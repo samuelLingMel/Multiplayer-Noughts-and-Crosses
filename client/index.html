@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Noughts and Crosses</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <section class="game-board-one hidden gb">
+      <div class="game-square first-row first-column"></div>
+      <div class="game-square first-row first-column"></div>
+      <div class="game-square first-row first-column"></div>
+      <div class="game-square second-row second-column"></div>
+      <div class="game-square second-row second-column"></div>
+      <div class="game-square second-row second-column"></div>
+      <div class="game-square third-row third-column"></div>
+      <div class="game-square third-row third-column"></div>
+      <div class="game-square third-row third-column"></div>
+  </section>
+    <div class="rps-wrapper">
+      <ul id="events"></ul>
+      <div class="controls">
+        <div class="chat-wrapper">
+          <form id="chat-form">
+            <input id="chat" autocomplete="off" title="chat"/>
+            <button id="say">Say</button>
+          </form>
+          <!-- <button class="reset-button">Reset</button> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
