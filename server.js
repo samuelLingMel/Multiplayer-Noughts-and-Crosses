@@ -10,7 +10,9 @@ const app = express();
 const clientPath = `${__dirname}/../client`;
 console.log(`Serving static from ${clientPath}`);
 
-// app.get('/', (req, res) => res.send('hello'));
+app.get('/', (req, res) => {
+  res.sendFile(clientPath + '/index.html');
+});
 
 // app.listen(port, () => console.log(`server listening on port: ${port}`));
 
@@ -42,7 +44,5 @@ server.on('error', (err) => {
   console.error('Server error:', err);
 });
 
-server
-  .listen(port, () => {console.log(`RPS started on ${port}`)})
-  .use((req, res) => res.sendFile('/index.html', { root: __dirname }))
+server.listen(port, () => {console.log(`RPS started on ${port}`)})
 
